@@ -1,0 +1,16 @@
+﻿@model gitActionsDemo.Models.sampleText
+
+<form asp-action="Index" method="post">
+    <div class="form-group">
+        <label for="Text">Message:</label>
+        <input type="text" class="form-control" id="Text" name="Text" />
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+@if (ViewBag.Message != null)
+{
+    <div class="alert alert-success">
+        @ViewBag.Message
+    </div>
+}
